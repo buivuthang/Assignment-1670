@@ -1,0 +1,25 @@
+﻿@model Assignment.Models.Order
+
+<div class="container col-md-6 text-center mt-3">
+    <table class="table table-bordered">
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+        </tr>
+        
+            @foreach (var orderdetail in Model.OrderDetails)
+            {
+                <tr>
+                    <th>
+                        <a class="font-weight-bold" asp-controller="OrderDetail" asp-action="Detail" asp-route-id="@orderdetail.Id">
+                            @Model.Id
+                        </a>
+                    </th>
+                    <th>
+                        blablabla
+                    </th>
+                </tr>
+
+            }
+    </table>
+</div>
