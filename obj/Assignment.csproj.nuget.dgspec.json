@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hieupc\\Source\\Repos\\buivuthang\\Assignment-1670\\Assignment.csproj": {}
+    "C:\\Users\\hieupc\\source\\repos\\buivuthang\\Assignment-1670\\Assignment.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hieupc\\Source\\Repos\\buivuthang\\Assignment-1670\\Assignment.csproj": {
+    "C:\\Users\\hieupc\\source\\repos\\buivuthang\\Assignment-1670\\Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hieupc\\Source\\Repos\\buivuthang\\Assignment-1670\\Assignment.csproj",
+        "projectUniqueName": "C:\\Users\\hieupc\\source\\repos\\buivuthang\\Assignment-1670\\Assignment.csproj",
         "projectName": "Assignment",
-        "projectPath": "C:\\Users\\hieupc\\Source\\Repos\\buivuthang\\Assignment-1670\\Assignment.csproj",
+        "projectPath": "C:\\Users\\hieupc\\source\\repos\\buivuthang\\Assignment-1670\\Assignment.csproj",
         "packagesPath": "C:\\Users\\hieupc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hieupc\\Source\\Repos\\buivuthang\\Assignment-1670\\obj\\",
+        "outputPath": "C:\\Users\\hieupc\\source\\repos\\buivuthang\\Assignment-1670\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hieupc\\AppData\\Roaming\\NuGet\\NuGet.Config",
