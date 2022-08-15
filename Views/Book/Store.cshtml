@@ -52,7 +52,7 @@
                             </div>
                             <div class="card-footer">
                                 <form asp-controller="Order" asp-action="Make">
-                                    <input type="hidden" name="id" value="@mobile.Id" />
+                                    <input type="hidden" name="id" value="@book.Id" />
                                     <input class="form-control" type="number" name="quantity" required min="1" max="@book.Quantity">
                                     <div class="form-group mt-3">
                                         <input type="submit" class="btn btn-success" value="Make order"
