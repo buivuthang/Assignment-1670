@@ -11,7 +11,7 @@ namespace Assignment.Models
         public int Id { get; set; }
         [Required]
         public int Quantity { get; set; }
-        public float TotalPrice { get; set; }
+        public float Total { get; set; }
         public int OrderId { get; set; }
         public int BookId { get; set; }
         public Order Order { get; set; }
