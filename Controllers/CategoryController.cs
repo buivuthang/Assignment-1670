@@ -17,6 +17,7 @@ namespace Assignment.Controllers
         {
             context = applicationDbContext;
         }
+
         [Authorize(Roles = "StoreOwner")]
         public IActionResult Index()
         {
@@ -34,28 +35,23 @@ namespace Assignment.Controllers
 
         public IActionResult Detail(int id)
         {
-            var category = context.Category.Include(c => c.Books) 
+            var category = context.Category.Include(c => c.Books)
                                      .FirstOrDefault(c => c.Id == id);
             return View(category);
         }
 
-        [HttpGet]
-        public IActionResult Create()
+        public IActionResult Create(string category)
         {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Create(Category category)
-        {
+            Category c = new Category();
             if (ModelState.IsValid)
             {
-                context.Add(category);
+                c.Name = (string)TempData["Category"];
+                context.Add(c);
                 context.SaveChanges();
                 TempData["Message"] = "Add category successfully !";
                 return RedirectToAction(nameof(Index));
             }
-            return View(category);
+            return RedirectToAction(nameof(Index));
         }
 
         [HttpGet]

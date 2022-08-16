@@ -16,6 +16,7 @@ namespace Assignment.Data
         }
         public DbSet<Book> Book { get; set; }
         public DbSet<Category> Category { get; set; }
+        public DbSet<CategoryRequest> Request { get; set; }
         public DbSet<Order> Order { get; set; }
         public DbSet<OrderDetail> OrderDetail { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
