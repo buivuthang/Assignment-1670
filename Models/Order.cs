@@ -10,6 +10,7 @@ namespace Assignment.Models
         public int Id { get; set; }
         public int UserId { get; set; }
         public int OrderDetailId { get; set; }
+        public float Total { get; set; }
         public ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
