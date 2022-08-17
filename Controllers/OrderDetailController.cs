@@ -24,6 +24,7 @@ namespace Assignment.Controllers
             string jsoncart = session.GetString("cart");
             if (jsoncart != null)
             {
+                var total = 0.0;
                 var cart = JsonConvert.DeserializeObject<List<CartItem>>(jsoncart);
                 foreach (var item in cart)
                 {
@@ -33,6 +34,11 @@ namespace Assignment.Controllers
                     od.OrderId = (int)TempData["OrderId"];
                     od.BookId = item.book.Id;
                     context.Add(od);
+                    var order = context.Order.Find(od.OrderId);
+                    if(od.OrderId == order.Id)
+                    {
+                        order.Total += od.Total;
+                    }
                 }
                 TempData["Message"] = "Create Order Successfully !";
                 context.SaveChanges();

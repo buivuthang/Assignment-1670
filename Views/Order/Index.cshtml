@@ -3,7 +3,8 @@
 <div class="container text-center mt-3">
     @if (@TempData["Message"] != null)
     {
-        <p class="alert alert-danger">@TempData["Message"]</p>}
+        <p class="alert alert-danger">@TempData["Message"]</p>
+    }
     <table class="table table-bordered">
         <tr>
             <th colspan="4" class="h3 bg-light text-success">Order List</th>
@@ -12,6 +13,7 @@
             <th>Order Id</th>
             <th>User ID</th>
             <th>Total</th>
+            <th>Status</th>
             <th>Action</th>
         </tr>
         @foreach (var order in Model)
@@ -24,11 +26,39 @@
                         @order.Total
                     </a>
                 </td>
-                <td>
-                    <a class="btn btn-warning" asp-controller="Category" asp-action="Edit">
-                        Edit
-                    </a>
-                </td>
+
+                @if (order.Status == 0)
+                {
+                    <td> <p class="text text-warning">Pending</p> </td>
+                    <td>
+                        <a class="btn btn-success" asp-controller="Order" asp-action="Approved" asp-route-id="@order.Id">
+                            Approve
+                        </a>
+                        <a class="btn btn-danger" asp-controller="Order" asp-action="Rejected" asp-route-id="@order.Id"
+                   onclick="return confirm('Are you sure to reject this order ?');">
+                            Reject
+                        </a>
+                    </td>
+                }
+                else if (order.Status == 1)
+                {
+                    <td> <p class="text text-success">Approved</p> </td>
+                    <td>
+                        <a class="btn btn-warning" asp-controller="Order" asp-action="Edit">
+                            Edit
+                        </a>
+                    </td>
+                }
+                else if (order.Status == -1)
+                {
+                    <td> <p class="text text-danger">Rejected</p> </td>
+                          <td>
+                        <a class="btn btn-danger" asp-controller="Order" asp-action="Delete">
+                            Delete
+                        </a>
+                    </td>
+                }
+
             </tr>
         }
     </table>

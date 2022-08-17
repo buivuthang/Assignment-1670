@@ -26,6 +26,7 @@ namespace Assignment.Controllers
             if (ModelState.IsValid)
             {
                 o.UserId = currentUserID;
+                o.Status = 0;
                 context.Add(o);
                 context.SaveChanges();
                 TempData["OrderId"] = o.Id;
@@ -37,6 +38,23 @@ namespace Assignment.Controllers
         public IActionResult Index()
         {
             return View(context.Order.ToList());
+        }
+        public IActionResult Approved(int id)
+        {
+            var order = context.Order.Find(id);
+            order.Status = 1;
+            context.Order.Update(order);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Rejected(int id)
+        {
+            var order = context.Order.Find(id);
+            order.Status = -1;
+            context.Order.Update(order);
+            context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }
