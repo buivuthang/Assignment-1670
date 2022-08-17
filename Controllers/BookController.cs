@@ -32,6 +32,7 @@ namespace Assignment.Controllers
         {
             return View(context.Book.ToList());
         }
+
         [Authorize(Roles = "StoreOwner")]
         public IActionResult Delete(int id)
         {
@@ -50,6 +51,7 @@ namespace Assignment.Controllers
             return View(book);
         }
 
+        [Authorize(Roles = "StoreOwner")]
         [HttpGet]
         public IActionResult Create()
         {
@@ -57,6 +59,7 @@ namespace Assignment.Controllers
             return View();
         }
 
+        [Authorize(Roles = "StoreOwner")]
         [HttpPost]
         public IActionResult Create(Book book)
         {
@@ -70,6 +73,7 @@ namespace Assignment.Controllers
             return View(book);
         }
 
+        [Authorize(Roles = "StoreOwner")]
         [HttpGet]
         public IActionResult Edit(int id)
         {
@@ -77,6 +81,7 @@ namespace Assignment.Controllers
             return View(context.Book.Find(id));
         }
 
+        [Authorize(Roles = "StoreOwner")]
         [HttpPost]
         public IActionResult Edit(Book book)
         {
@@ -90,18 +95,21 @@ namespace Assignment.Controllers
             return View(book);
         }
 
+        [Authorize(Roles = "Customer")]
         public IActionResult PriceAsc()
         {
             var Books = context.Book.OrderBy(b => b.Price).ToList();
             return View("Store", Books);
         }
 
+        [Authorize(Roles = "Customer")]
         public IActionResult PriceDesc()
         {
             var Books = context.Book.OrderByDescending(b => b.Price).ToList();
             return View("Store", Books);
         }
 
+        [Authorize(Roles = "Customer")]
         [HttpPost]
         public IActionResult Search(string keyword)
         {
@@ -113,7 +121,6 @@ namespace Assignment.Controllers
         [Route("/checkout")]
         public IActionResult CheckOut()
         {
-            // Xử lý khi đặt hàng
             return View();
         }
     }

@@ -18,7 +18,7 @@ namespace Assignment.Controllers
             context = applicationDbContext;
         }
 
-        [Authorize(Roles = "StoreOwner")]
+        [Authorize(Roles = "Admin")]
         public IActionResult Index()
         {
             return View(context.Category.ToList());

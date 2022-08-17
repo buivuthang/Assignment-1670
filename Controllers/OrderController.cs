@@ -1,5 +1,6 @@
 ﻿using Assignment.Data;
 using Assignment.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -18,6 +19,7 @@ namespace Assignment.Controllers
             context = applicationDbContext;
         }
 
+        [Authorize(Roles = "Customer")]
         public IActionResult Create()
         {
             ClaimsPrincipal currentUser = this.User;
@@ -32,11 +34,13 @@ namespace Assignment.Controllers
                 TempData["OrderId"] = o.Id;
                 return RedirectToAction("Create", "OrderDetail");
             }
-            return RedirectToAction("Cart","Cart");
+            return RedirectToAction("Cart", "Cart");
         }
 
         public IActionResult Index()
         {
+            var user = context.Users.ToList();
+            ViewBag.Users = user;
             return View(context.Order.ToList());
         }
         public IActionResult Approved(int id)
@@ -56,10 +60,12 @@ namespace Assignment.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        [Authorize(Roles = "Customer")]
         public IActionResult Delete(int id)
         {
-            var order = context.Order.Include(o=>o.OrderDetails).FirstOrDefault(o=>o.Id == id);
-            foreach(var od in order.OrderDetails)
+            var order = context.Order.Include(o => o.OrderDetails).FirstOrDefault(o => o.Id == id);
+            foreach (var od in order.OrderDetails)
             {
                 var book = context.Book.Find(od.BookId);
                 book.Quantity += od.Quantity;
@@ -74,9 +80,30 @@ namespace Assignment.Controllers
         public IActionResult Detail(int id)
         {
             var order = context.Order.Include(o => o.OrderDetails)
-                                     .ThenInclude(od=>od.Book)
+                                     .ThenInclude(od => od.Book)
                                      .FirstOrDefault(o => o.Id == id);
             return View(order);
+        }
+
+        [HttpPost]
+        public IActionResult Search(string keyword)
+        {
+            var customer = context.Users.Where(u => u.Email.Contains(keyword)).ToList();
+            var order = context.Order.ToList();
+            List<Order> Result = new List<Order>();
+            foreach (var o in order)
+            {
+                foreach (var c in customer)
+                {
+                    if (o.UserId.Equals(c.Id))
+                    {
+                        Result.Add(o);
+                    }
+                }
+            }
+            var user = context.Users.ToList();
+            ViewBag.Users = user;
+            return View("Index", Result);
         }
 
     }

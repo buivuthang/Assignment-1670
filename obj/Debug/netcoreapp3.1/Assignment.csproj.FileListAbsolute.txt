@@ -1865,7 +1865,6 @@ C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\OrderDetail\Index.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\CartPartial.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
