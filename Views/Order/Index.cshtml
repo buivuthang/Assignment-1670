@@ -22,9 +22,7 @@
                 <td>@order.Id</td>
                 <td>@order.UserId</td>
                 <td>
-                    <a class="font-weight-bold" asp-controller="OrderDetail" asp-action="Index">
                         @order.Total
-                    </a>
                 </td>
 
                 @if (order.Status == 0)

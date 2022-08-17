@@ -96,7 +96,6 @@ namespace Assignment.Controllers
             var cartitem = cart.Find(b => b.book.Id == bookid);
             if (cartitem != null)
             {
-                // Đã tồn tại, tăng thêm 1
                 cartitem.quantity = quantity;
             }
             SaveCartSession(cart);
@@ -110,9 +109,9 @@ namespace Assignment.Controllers
         {
             var cart = GetCartItems();
             var cartitem = cart.Find(b => b.book.Id == bookid);
+
             if (cartitem != null)
             {
-                // Đã tồn tại, tăng thêm 1
                 cart.Remove(cartitem);
             }
 
@@ -122,7 +121,7 @@ namespace Assignment.Controllers
 
         public IActionResult MakeOrder()
         {
-            return RedirectToAction("Create","Order");
+            return RedirectToAction("Create", "Order");
         }
 
 
