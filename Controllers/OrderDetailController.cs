@@ -24,7 +24,6 @@ namespace Assignment.Controllers
             string jsoncart = session.GetString("cart");
             if (jsoncart != null)
             {
-                var total = 0.0;
                 var cart = JsonConvert.DeserializeObject<List<CartItem>>(jsoncart);
                 foreach (var item in cart)
                 {
@@ -39,10 +38,12 @@ namespace Assignment.Controllers
                     {
                         order.Total += od.Total;
                     }
+                    var book = context.Book.Find(item.book.Id);
+                    book.Quantity -= item.quantity;
                 }
-                TempData["Message"] = "Create Order Successfully !";
                 context.SaveChanges();
             }
+            TempData["Message"] = "Order created successfully!";
             return RedirectToAction("Cart", "Cart");
         }
         public IActionResult Index()

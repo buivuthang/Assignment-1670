@@ -7,7 +7,7 @@
     }
     <table class="table table-bordered">
         <tr>
-            <th colspan="4" class="h3 bg-light text-success">Order List</th>
+            <th colspan="5" class="h3 bg-light text-success">Order List</th>
         </tr>
         <tr>
             <th>Order Id</th>
@@ -43,22 +43,21 @@
                 else if (order.Status == 1)
                 {
                     <td> <p class="text text-success">Approved</p> </td>
-                    <td>
-                        <a class="btn btn-warning" asp-controller="Order" asp-action="Edit">
-                            Edit
-                        </a>
-                    </td>
+
                 }
                 else if (order.Status == -1)
                 {
                     <td> <p class="text text-danger">Rejected</p> </td>
-                          <td>
-                        <a class="btn btn-danger" asp-controller="Order" asp-action="Delete">
-                            Delete
-                        </a>
-                    </td>
-                }
 
+                }
+                <td>
+                    <a class="btn btn-warning" asp-controller="Order" asp-action="Detail" asp-route-id="@order.Id">
+                        Detail
+                    </a>
+                              <a class="btn btn-danger" asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id">
+                        Delete
+                    </a>
+                </td>
             </tr>
         }
     </table>

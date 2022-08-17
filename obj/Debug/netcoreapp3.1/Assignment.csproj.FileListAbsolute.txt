@@ -1881,3 +1881,4 @@ C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.dll
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.pdb
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.genruntimeconfig.cache
+C:\Users\hieupc\source\repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Detail.cshtml.g.cs

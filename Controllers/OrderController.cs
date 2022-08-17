@@ -56,5 +56,28 @@ namespace Assignment.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            var order = context.Order.Include(o=>o.OrderDetails).FirstOrDefault(o=>o.Id == id);
+            foreach(var od in order.OrderDetails)
+            {
+                var book = context.Book.Find(od.BookId);
+                book.Quantity += od.Quantity;
+                context.OrderDetail.Remove(od);
+            }
+            context.Order.Remove(order);
+            context.SaveChanges();
+            TempData["Message"] = "Delete order successfully !";
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Detail(int id)
+        {
+            var order = context.Order.Include(o => o.OrderDetails)
+                                     .ThenInclude(od=>od.Book)
+                                     .FirstOrDefault(o => o.Id == id);
+            return View(order);
+        }
+
     }
 }
