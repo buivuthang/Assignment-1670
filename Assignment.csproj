@@ -27,10 +27,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\OrderDetail\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="Views\Book\Store.cshtml" />
   </ItemGroup>
 

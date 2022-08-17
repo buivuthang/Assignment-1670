@@ -1382,7 +1382,6 @@ E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Category
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Category\Index.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Cart.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Index.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -1400,3 +1399,4 @@ E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.genruntim
 E:\GCH0904\1670\Asm\Assignment-1670\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\CartPartial.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Cart.cshtml.g.cs
+E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\OrderDetail\Index.cshtml.g.cs

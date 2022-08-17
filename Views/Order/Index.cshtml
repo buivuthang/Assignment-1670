@@ -1,25 +1,33 @@
-﻿@model Assignment.Models.Order
+﻿@model ICollection<Order>
 
-<div class="container col-md-6 text-center mt-3">
+<div class="container text-center mt-3">
+    @if (@TempData["Message"] != null)
+    {
+        <p class="alert alert-danger">@TempData["Message"]</p>}
     <table class="table table-bordered">
         <tr>
-            <th>Id</th>
-            <th>Username</th>
+            <th colspan="3" class="h3 bg-light text-success">Order List</th>
         </tr>
-        
-            @foreach (var orderdetail in Model.OrderDetails)
-            {
-                <tr>
-                    <th>
-                        <a class="font-weight-bold" asp-controller="OrderDetail" asp-action="Detail" asp-route-id="@orderdetail.Id">
-                            @Model.Id
-                        </a>
-                    </th>
-                    <th>
-                        blablabla
-                    </th>
-                </tr>
-
-            }
+        <tr>
+            <th>Order Id</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var order in Model)
+        {
+            <tr>
+                <td>@order.OrderDetailId</td>
+                <td>
+                    <a class="font-weight-bold" asp-controller="OrderDetail" asp-action="Index" asp-route-id="@order.OrderDetailId">
+                        @order.Total
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-warning" asp-controller="Category" asp-action="Edit" asp-route-id="@order.OrderDetailId">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
     </table>
 </div>

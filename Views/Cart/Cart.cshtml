@@ -44,7 +44,15 @@
         </tr>
     </table>
 
-    <a asp-controller="Book" asp-action="Checkout" class="btn btn-success">Make Order</a>
+        <form asp-controller="OrderDetail" asp-action="Make">
+            <input type="hidden" name="id"  />
+            <input type="hidden" name="id"  />
+            <div class="form-group mt-3">
+                <input type="submit" class="btn btn-success" value="Make order"
+                       onclick="    return confirm('Are you sure to order this mobile ?');" />
+            </div>
+        </form>
+   
 
     @section Scripts {
         <script>

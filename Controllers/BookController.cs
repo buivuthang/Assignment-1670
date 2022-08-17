@@ -109,8 +109,6 @@ namespace Assignment.Controllers
             return View("Store", Books);
         }
 
-        //from this is for cart
-        // Thêm sản phẩm vào cart
 
         [Route("/checkout")]
         public IActionResult CheckOut()

@@ -40,7 +40,7 @@ namespace Assignment.Controllers
             return View(category);
         }
 
-        public IActionResult Create(string category)
+        public IActionResult Create()
         {
             Category c = new Category();
             if (ModelState.IsValid)
