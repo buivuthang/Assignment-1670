@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Assignment.Controllers
@@ -19,17 +20,18 @@ namespace Assignment.Controllers
 
         public IActionResult Create()
         {
-            Order c = new Order();
+            ClaimsPrincipal currentUser = this.User;
+            var currentUserID = currentUser.FindFirst(ClaimTypes.NameIdentifier).Value;
+            Order o = new Order();
             if (ModelState.IsValid)
             {
-                c.OrderDetailId = (int)TempData["OrderId"];
-                c.Total = (int)TempData["Total"];
-                context.Add(c);
+                o.UserId = currentUserID;
+                context.Add(o);
                 context.SaveChanges();
-                TempData["Message"] = "Create Order Successfully !";
-                return RedirectToAction(nameof(Index));
+                TempData["OrderId"] = o.Id;
+                return RedirectToAction("Create", "OrderDetail");
             }
-            return RedirectToAction(nameof(Index));
+            return RedirectToAction("Cart","Cart");
         }
 
         public IActionResult Index()

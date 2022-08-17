@@ -24,7 +24,6 @@ namespace Assignment.Controllers
         // Lấy cart từ Session (danh sách CartItem)
         List<CartItem> GetCartItems()
         {
-
             var session = HttpContext.Session;
             string jsoncart = session.GetString(CARTKEY);
             if (jsoncart != null)
@@ -119,6 +118,11 @@ namespace Assignment.Controllers
 
             SaveCartSession(cart);
             return RedirectToAction(nameof(Cart));
+        }
+
+        public IActionResult MakeOrder()
+        {
+            return RedirectToAction("Create","Order");
         }
 
 
