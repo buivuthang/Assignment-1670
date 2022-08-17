@@ -1,8 +1,10 @@
 ﻿using Assignment.Data;
 using Assignment.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,6 +107,16 @@ namespace Assignment.Controllers
         {
             var Books = context.Book.Where(b => b.Title.Contains(keyword)).ToList();
             return View("Store", Books);
+        }
+
+        //from this is for cart
+        // Thêm sản phẩm vào cart
+
+        [Route("/checkout")]
+        public IActionResult CheckOut()
+        {
+            // Xử lý khi đặt hàng
+            return View();
         }
     }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GCH0904\\1670\\Asm\\Assignment\\Assignment.csproj": {}
+    "E:\\GCH0904\\1670\\Asm\\Assignment-1670\\Assignment.csproj": {}
   },
   "projects": {
-    "E:\\GCH0904\\1670\\Asm\\Assignment\\Assignment.csproj": {
+    "E:\\GCH0904\\1670\\Asm\\Assignment-1670\\Assignment.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GCH0904\\1670\\Asm\\Assignment\\Assignment.csproj",
+        "projectUniqueName": "E:\\GCH0904\\1670\\Asm\\Assignment-1670\\Assignment.csproj",
         "projectName": "Assignment",
-        "projectPath": "E:\\GCH0904\\1670\\Asm\\Assignment\\Assignment.csproj",
+        "projectPath": "E:\\GCH0904\\1670\\Asm\\Assignment-1670\\Assignment.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\GCH0904\\1670\\Asm\\Assignment\\obj\\",
+        "outputPath": "E:\\GCH0904\\1670\\Asm\\Assignment-1670\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,9 +74,17 @@
               "target": "Package",
               "version": "[3.1.25, )"
             },
+            "Microsoft.Extensions.Caching.Memory": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [

@@ -51,7 +51,10 @@
                                 <h5 class="text text-danger">In-stock: @book.Quantity</h5>
                             </div>
                             <div class="card-footer">
-                                <form asp-controller="Order" asp-action="Make">
+                                <a asp-route="addcart"
+                                   asp-route-bookid="@book.Id"
+                                   class="btn btn-secondary btn-sm float-right">Add to Cart</a>
+                                @*<form asp-controller="Order" asp-action="Make">
                                     <input type="hidden" name="id" value="@book.Id" />
                                     <input class="form-control" type="number" name="quantity" required min="1" max="@book.Quantity">
                                     <div class="form-group mt-3">
@@ -59,7 +62,7 @@
                                         onclick="    return confirm('Are you sure to order this mobile ?');"
                                         />
                                     </div>
-                                </form>
+                                </form>*@
                             </div>
                         }
                     </div>
