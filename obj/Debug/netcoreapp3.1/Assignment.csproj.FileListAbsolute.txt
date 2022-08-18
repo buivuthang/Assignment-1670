@@ -2366,3 +2366,4 @@ E:\GCH0904\1670\Assigment\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.csp
 E:\GCH0904\1670\Assigment\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.dll
 E:\GCH0904\1670\Assigment\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.pdb
 E:\GCH0904\1670\Assigment\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.genruntimeconfig.cache
+C:\Users\hieupc\source\repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\User\UserOrder.cshtml.g.cs

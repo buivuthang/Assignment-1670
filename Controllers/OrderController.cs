@@ -105,6 +105,14 @@ namespace Assignment.Controllers
             ViewBag.Users = user;
             return View("Index", Result);
         }
+        
+        public IActionResult Filter(int status)
+        {
+            var user = context.Users.ToList();
+            ViewBag.Users = user;
+            var order = context.Order.Where(o => o.Status.Equals(status)).ToList();
+            return View("Index", order);
+        }
 
     }
 }

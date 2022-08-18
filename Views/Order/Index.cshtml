@@ -14,15 +14,21 @@
     @if ((User.Identity.IsAuthenticated) && (User.IsInRole("StoreOwner")))
     {
         <div class="col">
-            <form aap-controller="Order" asp-action="Search" method="post">
+            <form asp-controller="Order" asp-action="Search" method="post">
                 <div class="form-group">
                     <input class="form-control" type="search" required name="keyword" placeholder="Search user by Email" />
                 </div>
             </form>
         </div>
+        <div class="col">
+            <h4>Filter</h4>
+        <a class="btn btn-success" asp-controller="Order" asp-action="Filter" asp-route-status=1>Approved</a>
+        <a class="btn btn-warning" asp-controller="Order" asp-action="Filter" asp-route-status=0>Pending</a>
+        <a class="btn btn-danger" asp-controller="Order" asp-action="Filter" asp-route-status=-1>Reject</a>
+        </div>
     }
 
-    <table class="table table-bordered">
+    <table class="table table-bordered mt-3">
         <tr>
             <th colspan="6" class="h3 bg-light text-success">Order List</th>
         </tr>
