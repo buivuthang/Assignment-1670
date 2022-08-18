@@ -1399,7 +1399,6 @@ E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.genruntim
 E:\GCH0904\1670\Asm\Assignment-1670\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Shared\CartPartial.cshtml.g.cs
 E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Cart.cshtml.g.cs
-E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\OrderDetail\Index.cshtml.g.cs
 C:\Users\hieupc\Source\Repos\Assignment-1670\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\hieupc\Source\Repos\Assignment-1670\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\hieupc\Source\Repos\Assignment-1670\bin\Debug\netcoreapp3.1\Assignment.StaticWebAssets.xml
@@ -1882,3 +1881,5 @@ C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.
 C:\Users\hieupc\Source\Repos\Assignment-1670\obj\Debug\netcoreapp3.1\Assignment.genruntimeconfig.cache
 C:\Users\hieupc\source\repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Detail.cshtml.g.cs
 C:\Users\hieupc\source\repos\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
+E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\Order\Detail.cshtml.g.cs
+E:\GCH0904\1670\Asm\Assignment-1670\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
