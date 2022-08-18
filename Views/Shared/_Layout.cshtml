@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Assignment</title>
+    <title>@ViewData["Title"] - FPT Book</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -20,7 +20,7 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-primary" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
                             @await Html.PartialAsync("CartPartial")
@@ -28,34 +28,34 @@
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">User</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="User" asp-action="Index">User</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Category" asp-action="Index">Categories</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Category" asp-action="Index">Categories</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="CategoryRequest" asp-action="Index">Category Request</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="CategoryRequest" asp-action="Index">Category Request</a>
                             </li>
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("StoreOwner"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="">Books</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Book" asp-action="">Books</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="CategoryRequest" asp-action="Create">Request Category</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="CategoryRequest" asp-action="Create">Request Category</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="">Order</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Order" asp-action="">Order</a>
                             </li>
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Customer"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Book" asp-action="Store">Store</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Book" asp-action="Store">Store</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="">My Order</a>
+                                <a class="nav-link text-primary" asp-area="" asp-controller="Order" asp-action="">My Order</a>
                             </li>
                         }
 
@@ -73,7 +73,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Assignment - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2022 - Assignment 
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

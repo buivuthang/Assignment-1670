@@ -54,6 +54,42 @@ namespace Assignment.Data
                     Price = 10,
                     Quantity = 100,
                     CategoryId = 2
+                },
+                new Book
+                {
+                    Id = 3,
+                    Title = "DoraBase",
+                    Publisher = "Kim Dong",
+                    Author = "Mugiwara",
+                    YearPublished = 2008,
+                    Image = "https://images.thuvienpdf.com/LVAq31.webp",
+                    Price = 6,
+                    Quantity = 50,
+                    CategoryId = 4
+                },
+                new Book
+                {
+                    Id = 4,
+                    Title = "IT - Gã Hề Ma Quái",
+                    Publisher = "Thanh Niên",
+                    Author = "Stephen King",
+                    YearPublished = 2022,
+                    Image = "https://cdn0.fahasa.com/media/catalog/product/8/9/8936066693349-1_2.jpg",
+                    Price = 15,
+                    Quantity = 50,
+                    CategoryId = 3
+                },
+                new Book
+                {
+                    Id = 5,
+                    Title = "Đắc Nhân Tâm",
+                    Publisher = "NXB Trẻ",
+                    Author = "Dale Carnagie",
+                    YearPublished = 2012,
+                    Image = "https://s.memehay.com/files/posts/20201216/cuon-sach-dak-nhan-tam-dark-nhan-tam.png",
+                    Price = 15,
+                    Quantity = 2000,
+                    CategoryId = 5
                 }
             );
         }
@@ -69,6 +105,21 @@ namespace Assignment.Data
                 {
                     Id = 2,
                     Name = "Detective"
+                },
+                new Category
+                {
+                    Id = 3,
+                    Name = "Horror"
+                },
+                new Category
+                {
+                    Id = 4,
+                    Name = "Manga"
+                },
+                new Category
+                {
+                    Id = 5,
+                    Name = "Business"
                 }
             );
         }

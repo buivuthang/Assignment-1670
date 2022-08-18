@@ -1,4 +1,5 @@
-﻿using Assignment.Models;
+﻿using Assignment.Data;
+using Assignment.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,15 +13,17 @@ namespace Assignment.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private ApplicationDbContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext applicationDbContext)
         {
             _logger = logger;
+            context = applicationDbContext;
         }
 
         public IActionResult Index()
         {
-            return View();
+            return View(context.Book.ToList());
         }
 
         public IActionResult Privacy()
