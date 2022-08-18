@@ -27,9 +27,9 @@
             <tr>
                 <td>@(number++)</td>
                 <td>@cartitem.book.Title</td>
-                <td>@(cartitem.book.Price.ToString("n0"))</td>
+                <td>@cartitem.book.Price</td>
                 <td><input asp-for="@cartitem.quantity" id="@($"quantity-{cartitem.book.Id}")" min="1" max="@cartitem.book.Quantity" /></td>
-                <td>@(amount.ToString("n0"))</td>
+                <td>@amount</td>
                 <td>
                     <button class="btn btn-success updatecartitem"
                     data-bookid="@cartitem.book.Id">
@@ -41,7 +41,7 @@
         }
         <tr>
             <td colspan="4" class="text-right">Total Price</td>
-            <td>@(total.ToString("n0"))</td>
+            <td>@total</td>
             <td></td>
         </tr>
     </table>
