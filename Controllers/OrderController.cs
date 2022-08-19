@@ -61,7 +61,6 @@ namespace Assignment.Controllers
             return RedirectToAction("Index");
         }
 
-        [Authorize(Roles = "Customer")]
         public IActionResult Delete(int id)
         {
             var order = context.Order.Include(o => o.OrderDetails).FirstOrDefault(o => o.Id == id);
