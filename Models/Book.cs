@@ -23,7 +23,6 @@ namespace Assignment.Models
         [Required]
         [Range(1,1000)]
         public int Quantity { get; set; }
-        [Required]
         [Display(Name = "Category name")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }

@@ -54,7 +54,7 @@ namespace Assignment.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            ViewBag.Categories = context.Category.ToList();
+            ViewBag.Category = context.Category.ToList();
             return View();
         }
 
@@ -63,13 +63,14 @@ namespace Assignment.Controllers
         {
             if (ModelState.IsValid)
             {
-                context.Add(book);
+                context.Book.Add(book);
                 context.SaveChanges();
-                TempData["Message"] = "Add book successfully !";
+                TempData["Message"] = "Add new book successfully !";
                 return RedirectToAction(nameof(Index));
             }
             return View(book);
         }
+
 
         [HttpGet]
         public IActionResult Edit(int id)
