@@ -4,14 +4,16 @@ using Assignment.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Assignment.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220819160649_final")]
+    partial class final
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -265,21 +267,21 @@ namespace Assignment.Data.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "496b7fc1-1846-4f88-9a2c-e35885262c8d",
+                            ConcurrencyStamp = "179793a2-6e66-449f-8067-63546856b4e8",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "15925a31-532f-41ca-97fd-9ab9aa4c76b8",
+                            ConcurrencyStamp = "23e1fd79-fdf6-45ac-b8f6-59da2050b72f",
                             Name = "StoreOwner",
                             NormalizedName = "StoreOwner"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "48fcba8b-8fa9-44cd-936e-37605329e0f4",
+                            ConcurrencyStamp = "26ab6de8-b0a1-4a9a-b788-5604d79710ac",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         });
@@ -378,14 +380,14 @@ namespace Assignment.Data.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "0bf03bd0-2dac-4826-b87c-d9cc7e9b7146",
+                            ConcurrencyStamp = "541585c2-32d8-4c11-a317-e3a5138fb130",
                             Email = "admin@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "admin@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEE5R9wSzlxTeXAgFuPNnFsaoCHAJKE6jUTC5PFkVolK+p4H3L75zGeOAzGrnTgyw7A==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEM3nwepH4t2wkwtZ1v1o19WZP/91zWXp0CBpoP9LV9AVf2P90y5TL9dSYJNYaW9mRQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "d2a78f4f-469b-4d49-8983-3927f3553a21",
+                            SecurityStamp = "0e8a2e00-229c-4463-9bb4-a16721bc25e0",
                             TwoFactorEnabled = false,
                             UserName = "admin@gmail.com"
                         },
@@ -393,14 +395,14 @@ namespace Assignment.Data.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eccd2ab5-074f-4840-a131-c231d8a92c67",
+                            ConcurrencyStamp = "c542c746-64c2-4fef-bf5d-80fce61b48a8",
                             Email = "storeowner@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "storeowner@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEKbE5KyavbdCRp0ckHk+2/8BMXqP/ec2Bd2OHRgBTRm/VW0Y5BFMf/8kBmDyufUiDg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEI78gfuRfJdeKFgTvJcD+jXRY6m5K7762LBEYJkxSakuCvKMeDp63WiY97kWbl3k7Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "c7908ebe-3c55-4ed4-8992-bec5b811ce46",
+                            SecurityStamp = "758fb26b-125b-488b-883c-51af83db8561",
                             TwoFactorEnabled = false,
                             UserName = "storeowner@gmail.com"
                         },
@@ -408,14 +410,14 @@ namespace Assignment.Data.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c7f65d94-084f-41e2-85f9-26b0892ac623",
+                            ConcurrencyStamp = "6ebb990f-6d33-47f0-ba08-ccf456eed43e",
                             Email = "customer@gmail.com",
                             EmailConfirmed = false,
                             LockoutEnabled = false,
                             NormalizedUserName = "customer@gmail.com",
-                            PasswordHash = "AQAAAAEAACcQAAAAEMFng5tz6PfWBRAddRnRnNpg0N/fC29w0AnXqfrU4CgRoZytC/SMPaTPe21JZX/ZVg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEAlS6e165BUPWjDdMqU2upCBpzlFCT9cHnQ/qwg0ffdHf8D8qc+at1D6UitkL6PXfw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2028f719-22d6-4e6e-bce5-21c7b6c047f5",
+                            SecurityStamp = "d0c88685-383b-4ae2-a081-d7ee31040fcf",
                             TwoFactorEnabled = false,
                             UserName = "customer@gmail.com"
                         });

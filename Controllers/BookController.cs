@@ -61,6 +61,7 @@ namespace Assignment.Controllers
         [HttpPost]
         public IActionResult Create(Book book)
         {
+            ViewBag.Category = context.Category.ToList();
             if (ModelState.IsValid)
             {
                 context.Book.Add(book);
