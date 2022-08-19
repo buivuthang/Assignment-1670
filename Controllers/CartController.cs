@@ -85,7 +85,14 @@ namespace Assignment.Controllers
             {
                 cartitem.quantity = quantity;
             }
-            SaveCartSession(cart);
+            if (quantity > cartitem.book.Quantity)
+            {
+                TempData["Message"] = "Order failed!";
+            }
+            else
+            {
+                SaveCartSession(cart);
+            }
             return Ok();
         }
 
