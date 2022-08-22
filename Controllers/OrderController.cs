@@ -112,6 +112,5 @@ namespace Assignment.Controllers
             var order = context.Order.Where(o => o.Status.Equals(status)).ToList();
             return View("Index", order);
         }
-
     }
 }

@@ -46,9 +46,5 @@ namespace Assignment.Controllers
             TempData["Message"] = "Order created successfully!";
             return RedirectToAction("Cart", "Cart");
         }
-        public IActionResult Index()
-        {
-            return View(context.OrderDetail.ToList());
-        }
     }
 }

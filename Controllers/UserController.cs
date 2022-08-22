@@ -22,7 +22,7 @@ namespace Assignment.Controllers
         public IActionResult UserOrder()
         {
             var user = context.Users.ToList();
-            var order = context.Order.Include(o => o.OrderDetails).ToList();
+            var order = context.Order.ToList();
 
             ViewBag.Order = order;
             return View(user);

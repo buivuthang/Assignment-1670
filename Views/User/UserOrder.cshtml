@@ -27,10 +27,7 @@
                         if (user.Id == order.UserId)
                         {
                             count++;
-                            foreach (var od in order.OrderDetails)
-                            {
-                                pay += od.Total;
-                            }
+                                pay += order.Total;
                         }
 
                     }
@@ -42,3 +39,4 @@
         }
     </table>
 </div>
+

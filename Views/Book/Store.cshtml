@@ -16,7 +16,7 @@
         </div>
 
         <div class="col">
-            <form aap-controller="Book" asp-action="Search" method="post">
+            <form asp-controller="Book" asp-action="Search" method="post">
                 <div class="form-group">
                     <input class="form-control" type="search" required name="keyword" placeholder="Search by book name" />
                 </div>
@@ -35,7 +35,7 @@
                 <div class="col-md p-3">
                     <div class="card">
                         <div class="card-body">
-                            <img class="card-img-top" src="@book.Image">
+                            <a asp-controller="Book" asp-action="Detail" asp-route-id="@book.Id"><img class="card-img-top" src="@book.Image"></a>
                             <h4 class="text text-primary mt-3">@book.Title</h4>
                             <h5 class="text text-success">$ @book.Price</h5>
                         </div>
